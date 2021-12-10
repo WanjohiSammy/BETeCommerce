@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BETeCommerce</name>
+    </assembly>
+    <members>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.GetCategories(BETeCommerce.BunessEntities.Requests.PaginationQueryParams)">
+            <summary>
+            Get Categories
+            </summary>
+            <param name="queryParams"></param>
+            <returns>CategoriesResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.GetAllCategories">
+            <summary>
+            Get all Categores
+            </summary>
+            <returns>CategoriesResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.GetProductsByCategory(System.Guid,BETeCommerce.BunessEntities.Requests.PaginationQueryParams)">
+            <summary>
+            Get Products by Category
+            </summary>
+            <param name="queryParams"></param>
+            <returns>CategoriesResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.GetCategory(System.Guid)">
+            <summary>
+            Get Single Category by Id
+            </summary>
+            <param name="id"></param>
+            <returns>CategoryDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.PostCategory(BETeCommerce.BunessEntities.Requests.AddCategoryRequest)">
+            <summary>
+            Add new Category
+            </summary>
+            <param name="request"></param>
+            <returns>CategoryDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.PutCategory(BETeCommerce.BunessEntities.Requests.UpdateCategoryRequest)">
+            <summary>
+            Update Category
+            </summary>
+            <param name="request"></param>
+            <returns>CategoryDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.CategoriesController.DeleteCategory(BETeCommerce.BunessEntities.Requests.DeleteItemRequest)">
+            <summary>
+            Delete Category
+            </summary>
+            <param name="request"></param>
+            <returns>CategoryDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.GetOrders(BETeCommerce.BunessEntities.Requests.PaginationQueryParams)">
+            <summary>
+            Get Orders made
+            </summary>
+            <param name="queryParams"></param>
+            <returns>ProductsOrderedResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.GetBuyersOrders(BETeCommerce.BunessEntities.Requests.PaginationQueryParams)">
+            <summary>
+            Get Orders by Buyers
+            </summary>
+            <param name="queryParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.GetOrderForProduct(System.Guid)">
+            <summary>
+            Get Single product orders
+            </summary>
+            <param name="productId"></param>
+            <returns>OrderDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.MakeNewOrder(BETeCommerce.BunessEntities.Requests.MakeOrderRequest)">
+            <summary>
+            Make a new order
+            </summary>
+            <param name="request"></param>
+            <returns>OrderDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.Checkout(BETeCommerce.BunessEntities.Requests.CheckoutItemsRequest)">
+            <summary>
+            CHeckout and Send Email
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.UpdateOrder(BETeCommerce.BunessEntities.Requests.UpdateOrderRequest)">
+            <summary>
+            Update Order
+            </summary>
+            <param name="request"></param>
+            <returns>OrderDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.OrdersController.DeleteOrder(BETeCommerce.BunessEntities.Requests.DeleteItemRequest)">
+            <summary>
+            Delete an Order
+            </summary>
+            <param name="request"></param>
+            <returns>OrderDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.GetProducts(BETeCommerce.BunessEntities.Requests.PaginationQueryParams)">
+            <summary>
+            Get list of products
+            </summary>
+            <param name="queryParams"></param>
+            <returns>ProductsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.GetProductDetails(System.Guid)">
+            <summary>
+            Get Details of a product
+            </summary>
+            <param name="id"></param>
+            <returns>ProductDetailsResponse</returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.PostProduct(BETeCommerce.BunessEntities.Requests.AddProductRequest)">
+            <summary>
+            Add product
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.PutProduct(BETeCommerce.BunessEntities.Requests.UpdateProductRequest)">
+            <summary>
+            Update product
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.UpdateProductImage(BETeCommerce.BunessEntities.Requests.UpdateProductImageRequest)">
+            <summary>
+            Update product image
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.ProductsController.Delete(BETeCommerce.BunessEntities.Requests.DeleteItemRequest)">
+            <summary>
+            Delete a product
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.UsersController.RegisterUser(BETeCommerce.BunessEntities.Requests.AddOrUdateUserRequest)">
+            <summary>
+            Register User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BETeCommerce.Controllers.UsersController.LoginUser(BETeCommerce.BunessEntities.Requests.LoginUserRequest)">
+            <summary>
+            Login a User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
