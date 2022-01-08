@@ -48,16 +48,18 @@ namespace BETeCommerce.UtilityLayer.Email
 
             foreach(var item in request.CartItems)
             {
+                var price = string.Format("{0:n}", item.Price);
                 var row = string.Format(EmailConstants.TableRow, 
                     item.ProductName, 
-                    item.Quantity, 
-                    item.Price);
+                    item.Quantity,
+                    price);
                 tablesRows.Append(row);
             }
 
+            var totalPrice = string.Format("{0:n}", request.TotalPrice);
             var emailFormed = EmailConstants.FullEmailTemplate
                 .Replace(EmailConstants.OrderNumberKey, Guid.NewGuid().ToString())
-                .Replace(EmailConstants.TotalKey, request.TotalPrice.ToString())
+                .Replace(EmailConstants.TotalKey, totalPrice.ToString())
                 .Replace(EmailConstants.TableRowsContentKey, tablesRows.ToString());
 
 

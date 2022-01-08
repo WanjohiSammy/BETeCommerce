@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL_API } from "../../constants/constants";
 import { addToCart, getCartItems } from "../../redux/actions/cartsActions";
+import { formatNumber } from "../../utils";
 
 interface ICard {
   product: any;
@@ -44,7 +45,7 @@ const Card: React.FC<ICard> = ({ product }) => {
       />
       <div className="card-body">
         <p className="card-text lead">Name: {product.name}</p>
-        <h4 className="card-text">Ksh: {product.price}</h4>
+        <h4 className="card-text">Ksh: {formatNumber(product.price)}</h4>
         <button className={`btn btn-${itemInCart ? "danger" : "primary"}`} onClick={onAddToCart} disabled={itemInCart}>
           {itemInCart ? "In Cart" : "Add to Cart"}
         </button>

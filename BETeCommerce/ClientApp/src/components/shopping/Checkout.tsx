@@ -7,6 +7,7 @@ import {
   getCartItems,
   removeCartItem,
 } from "../../redux/actions/cartsActions";
+import { formatNumber } from "../../utils";
 import Spinner from "../common/Spinner";
 import { useAuth } from "../customHooks/useAuth";
 import { Alert } from "../errors/Alert";
@@ -83,8 +84,8 @@ const Checkout = () => {
     for (let item of cartItems) {
       checkoutObj.cartItems.push({
         productName: item.name,
-        quantity: item.quantity,
-        price: item.price * item.quantity,
+        quantity: item.quantityChosen,
+        price: item.price * item.quantityChosen,
       });
     }
 
@@ -96,7 +97,7 @@ const Checkout = () => {
   if (cartItems) {
     for (let i = 0; i < cartItems.length; i++) {
       const item = cartItems[i];
-      totalPriceTmpt += item.quantity * item.price;
+      totalPriceTmpt += item.quantityChosen * item.price;
     }
   }
 
@@ -166,7 +167,7 @@ const Checkout = () => {
                     </span>
                   </div>
                 </td>
-                <td>{cart.price * cart.quantityChosen}</td>
+                <td>{formatNumber(cart.price * cart.quantityChosen)}</td>
                 <td>
                   <button
                     id={cart.id}
@@ -186,9 +187,10 @@ const Checkout = () => {
             </td>
             <td>
               <h3>
-                <strong>{totalPrices}</strong>
+                <strong>{formatNumber(totalPrices)}</strong>
               </h3>
             </td>
+            <td></td>
           </tr>
         </tbody>
       </table>
