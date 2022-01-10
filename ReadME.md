@@ -103,4 +103,4 @@ yarn start
 > Send Email
 
 ## Contact me
-same.wanjohi94@gmail.com
+sam.wanjohi94@gmail.com
